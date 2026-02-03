@@ -60,7 +60,15 @@ button {
 #no-btn {
     background-color: #e0e0e0;
     color: #333;
-    position: relative; /* Penting agar bisa diubah posisinya via JS */
+    /* Tambahan agar tombol No selalu di atas tombol Yes */
+    z-index: 9999; 
+    position: relative; /* Penting agar z-index jalan */
+}
+
+#yes-btn {
+    /* Pastikan tombol Yes ada di bawah No */
+    z-index: 1;
+    position: relative;
 }
 
 /* Tambahkan ini di paling bawah style.css */
@@ -84,4 +92,5 @@ button {
         transform: translateY(-100vh) scale(1.5); /* Terbang ke atas layar */
         opacity: 0;
     }
+
 }
