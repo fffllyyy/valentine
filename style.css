@@ -1,0 +1,87 @@
+body {
+    background-color: #ffe6e9; /* Pink lembut */
+    font-family: 'Nunito', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    overflow: hidden; /* Mencegah scroll saat tombol 'No' lari */
+}
+
+.card {
+    background: white;
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    text-align: center;
+    max-width: 400px;
+    width: 90%;
+}
+
+img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+}
+
+h1 {
+    color: #ff4d6d;
+    font-size: 24px;
+    margin: 20px 0;
+}
+
+.button-group {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+button {
+    padding: 10px 30px;
+    font-size: 18px;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: transform 0.2s;
+    font-weight: bold;
+}
+
+#yes-btn {
+    background-color: #ff4d6d;
+    color: white;
+}
+
+#yes-btn:hover {
+    background-color: #e63956;
+    transform: scale(1.1);
+}
+
+#no-btn {
+    background-color: #e0e0e0;
+    color: #333;
+    position: relative; /* Penting agar bisa diubah posisinya via JS */
+}
+
+/* Tambahkan ini di paling bawah style.css */
+
+.heart {
+    position: fixed;
+    bottom: 0;
+    font-size: 24px;
+    color: red;
+    animation: floatUp 5s linear forwards;
+    z-index: -1; /* Supaya hati ada di belakang kartu */
+    pointer-events: none; /* Supaya tidak bisa diklik */
+}
+
+@keyframes floatUp {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-100vh) scale(1.5); /* Terbang ke atas layar */
+        opacity: 0;
+    }
+}
