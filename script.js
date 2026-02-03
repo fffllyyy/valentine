@@ -1,5 +1,5 @@
 const urlParams = new URLSearchParams(window.location.search);
-const namaTarget = urlParams.get('Citra') || 'Citra';
+const namaTarget = urlParams.get('name') || 'Citra';
 
 // Update teks HTML
 document.getElementById('question-text').innerText = `${namaTarget}, will you be my valentine?`;
@@ -102,5 +102,6 @@ function createHeart() {
     document.body.appendChild(heart);
     setTimeout(() => { heart.remove(); }, 5000);
 }
+
 
 
